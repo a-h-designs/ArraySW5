@@ -8,13 +8,13 @@ public class Example2ForEachLoop {
         }
         System.out.println("\nCalculating sum in progress....");
         int sum = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            sum = sum + numbers[i];
+        for (int number : numbers) {
+            sum = sum + number;
             System.out.println(sum);
         }
         System.out.println("The total is " + sum);
         // extension calculate average and print, double average = sum/10;
-        double average = sum/10;
+        double average = (double)sum/10;
         System.out.println("The average is : " + average);
     }
 }
