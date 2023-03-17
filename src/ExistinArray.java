@@ -13,7 +13,7 @@ public class ExistinArray {
         int guess = reader.nextInt();
         //use for loop to access your array, if number[1] == guess, you found the number
         for (int number : numbers) {
-            if (number == guess) {
+            if (guess == number) {
                 userGuess = true;
                 break;
             }
