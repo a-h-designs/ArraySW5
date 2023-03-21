@@ -10,39 +10,42 @@ public class Array2d {
                 {"Harry", "Potter", "Gryffindor"},
                 {"Draco", "Malfoy", "Slytherin"},
                 {"Newton", "Scamander", "Hufflepuff"},
-                {"Luna", "Lovegood", "Ravenclaw"}
+                {"Luna", "Lovegood", "Ravenclaw"},
+                {"Hermione", "Granger", "Gryffindor"},
+                {"Ron", "Weasley", "Gryffindor"}
         };
 
-        int option = 0;
-        System.out.println("Enter a number and we will see if it's in our database.");
-        String guess = reader.next();
+        boolean confirm = false;
+        System.out.println("---Harry Potter character database---");
+        System.out.println("Enter a character to search.");
+        String guess = reader.nextLine();
+        System.out.println();
 
-        for (int i = 0; i < students.length; i++) {
-            if (guess.equalsIgnoreCase("Harry")) {
-                option = 1;
-                break;
-            } else if (guess.equalsIgnoreCase("Draco")) {
-                option = 2;
-                break;
-            } else if (guess.equalsIgnoreCase("Newton")) {
-                option = 3;
-                break;
-            } else if (guess.equalsIgnoreCase("Luna")) {
-                option = 4;
-                break;
+        for (String[] student : students) {
+            for (String s : student) {
+                if (s.equalsIgnoreCase(guess)) {
+                    confirm = true;
+                    break;
+                }
             }
         }
 
-        if (option == 1) {
-            System.out.print(students[0][0] + " " + students[0][1] + " - " + students[0][2]);
-        } else if (option == 2) {
-            System.out.print(students[1][0] + " " + students[1][1] + " - " + students[1][2]);
-        } else if (option == 3) {
-            System.out.print(students[2][0] + " " + students[2][1] + " - " + students[2][2]);
-        } else if (option == 4) {
-            System.out.print(students[3][0] + " " + students[3][1] + " - " + students[3][2]);
+        if (confirm) {
+            if (guess.equalsIgnoreCase("Harry") || guess.equalsIgnoreCase("Potter")) {
+                System.out.println(students[0][0] + " " + students[0][1] + " - " + students[0][2]);
+            } else if (guess.equalsIgnoreCase("Draco") || guess.equalsIgnoreCase("Malfoy")) {
+                System.out.println(students[1][0] + " " + students[1][1] + " - " + students[1][2]);
+            } else if (guess.equalsIgnoreCase("Newton") || guess.equalsIgnoreCase("Scamander")) {
+                System.out.println(students[2][0] + " " + students[2][1] + " - " + students[2][2]);
+            } else if (guess.equalsIgnoreCase("Luna") || guess.equalsIgnoreCase("Lovegood")) {
+                System.out.println(students[3][0] + " " + students[3][1] + " - " + students[3][2]);
+            } else if (guess.equalsIgnoreCase("Hermione") || guess.equalsIgnoreCase("Granger")) {
+                System.out.println(students[4][0] + " " + students[4][1] + " - " + students[4][2]);
+            } else if (guess.equalsIgnoreCase("Ron") || guess.equalsIgnoreCase("Weasley")) {
+                System.out.println(students[5][0] + " " + students[5][1] + " - " + students[5][2]);
+            }
         } else {
-            System.out.print("Not found.");
+            System.out.println("Character not found in the database.");
         }
     }
 }
