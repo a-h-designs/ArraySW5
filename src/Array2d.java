@@ -16,7 +16,7 @@ public class Array2d {
         };
 
         boolean confirm = false;
-        System.out.println("---Harry Potter character database---");
+        System.out.println("---HARRY POTTER CHARACTER INFORMATION---");
         System.out.println("Enter a character to search.");
         String guess = reader.nextLine();
         System.out.println();
