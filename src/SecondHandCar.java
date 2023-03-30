@@ -7,7 +7,8 @@ public class SecondHandCar {
         }
 
         carPrices[0] = 12670;
-        System.out.println("Updated Prices:");
+        carPrices[4] = 42450;
+        System.out.println("\nUpdated Prices:");
         for (int i = 0; i < carPrices.length; i++) {
             System.out.println(carPrices[i]);
         }
